@@ -5,12 +5,14 @@
   }
 
   a:-webkit-any-link {
-    color: black;
+    color: white;
     text-decoration: none;
   }
 
   .header-container {
-    padding: 2rem 0;
+    padding: 2rem;
+    z-index: 999;
+    position: relative;
   }
 
   .header-center {
@@ -71,7 +73,6 @@
     vertical-align: middle;
     padding: 0 1rem;
     margin-top: -0.3rem;
-    border: 1px solid blue;
   }
 </style>
 
@@ -88,7 +89,7 @@
           {% for link in linklists['main-menu'].links -%}
             <li>{{ link.title | link_to: link.url }}</li>
           {%- endfor %}
-          <a href="{{ routes.cart_url }}" class="cart-icon">
+          <a href="{{ routes.cart_url }}" class="cart-icon" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
             <svg
               class="cart-icon"
               xmlns="http://www.w3.org/2000/svg"
