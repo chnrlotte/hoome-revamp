@@ -6,3 +6,13 @@ h0 {
     top: -110px;
     position: relative;
 }
+
+.product-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.product-image img {
+    border: 1px solid black;
+    border-radius: 2.5%;
+}
