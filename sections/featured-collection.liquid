@@ -1,0 +1,12 @@
+<style>
+
+</style>
+
+{{ collections['cups-mugs'].title }}
+
+{% for product in collections['cups-mugs'].products %}
+  <div class="product-image"><a href="{{ product.url }}"><img src="{{ product.featured_image | image_url }}"></a></div>
+  <div class="product-title">{{ product.title | link_to: product.url }}</div>
+
+  {{ product.price | money }}
+{% endfor %}
